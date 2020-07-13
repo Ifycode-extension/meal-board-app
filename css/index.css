@@ -1,0 +1,482 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap');
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html, body, main {
+    height: 100vh;
+}
+
+html {
+    background: #4bc5c5;
+}
+
+body {
+    background: rgb(255, 255, 254);
+    padding: 8px;
+    box-shadow: 1px 1px 3px #c4c4c4 inset, -1px -1px 3px #c4c4c4 inset;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+main {
+    height: calc(100vh - 16px);
+    box-shadow: 1px 1px 3px #c4c4c4, -1px -1px 3px #c4c4c4;
+    border-radius: 0 25px 0 25px;
+    -webkit-border-radius: 0 25px 0 25px;
+    -moz-border-radius: 0 25px 0 25px;
+    -ms-border-radius: 0 25px 0 25px;
+    -o-border-radius: 0 25px 0 25px;
+    overflow-x: hidden; /*added because of the border radius effect*/
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    background: #4bc5c5;
+}
+
+
+/*=============
+    clock area
+==============*/
+
+section:nth-of-type(1) > div {
+    background: #44b8b8;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+section:nth-of-type(1) span {
+    font-family: 'Josefin Sans', sans-serif;
+    display: inline-block;
+    color: white;
+    font-size: 1.5em;
+    width: 30px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #389696, 1px 1px 2px #389696, 1px 1px 3px #389696, 1px 1px 4px #389696, -1px -1px 1px #389696, -1px -1px 2px #389696,-2px -2px 5px #e0dfdf;
+    letter-spacing: 1px;
+}
+
+section:nth-of-type(1) span.column {
+    width: 10px;
+    margin-right: 2px;
+}
+
+section:nth-of-type(1) span.seconds {
+    font-size: 1.4em;
+    margin-left: 5px;
+}
+
+
+/*=============
+    image area
+==============*/
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+aside > *{
+    margin: 50px auto;
+}
+
+aside > div {
+    width: 245px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+aside header {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 1.3em;
+    background: none;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+
+/*===========================
+     form and meal board area 
+=============================*/
+
+section:nth-of-type(2) > * {
+    background: #44b8b8;
+    max-width: 90%;
+    margin: 50px auto;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+/*meal board area*/
+
+section:nth-of-type(2) > div:nth-of-type(1){
+    background: transparent;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 1.2em;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+section:nth-of-type(2) > div:nth-of-type(2){
+    padding: 3px;
+    box-shadow: 1px 1px 5px #106868, -1px -1px 10px #106868;
+}
+
+div.table {
+    display: table;
+    width: 100%;
+    margin: 0 0 1px 0;
+}
+
+div.table:nth-last-of-type(1) {
+    margin: 0;
+}
+
+div.table-row {
+    display: table-row;
+}
+
+div.table-row > * {
+    display: table-cell;
+    width: 33%;
+    background: #369191;
+    color: white;
+    padding: 10px 0 10px 5px;
+    font-size: 0.9em;
+}
+
+div.table-row > div:nth-child(2) {
+    margin: 0 6px;
+}
+
+div.table-header {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+
+/*form*/
+
+form {
+    position: relative;
+}
+form fieldset {
+    padding: 20px 0;
+}
+
+form fieldset > * {
+    display: block;
+    width: 90%;
+    margin: 0 auto 15px auto;
+}
+
+form fieldset > div {
+    display: flex;
+    margin: 0 auto;
+}
+
+#validation-message {
+    position: absolute;
+    right: 0;
+    top: -25px;
+    background: #106868;
+    color: yellow;
+    padding: 5px;
+    font-size: 0.9em;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    transition: opacity 0.15s linear;
+    -webkit-transition: opacity 0.15s linear;
+    -moz-transition: opacity 0.15s linear;
+    -ms-transition: opacity 0.15s linear;
+    -o-transition: opacity 0.15s linear;
+}
+
+.hide-validation-message {
+    opacity: 0;
+}
+
+.show-validation-message {
+    opacity: 1;
+}
+
+input[type=text] {
+    padding: 15px 7px;
+    height: 25px;
+    font-size: 1em;
+    background: white;
+    color: #106868;
+    width: 90%;
+    border-bottom: 2px solid teal;
+    border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    -moz-border-radius: 0 0 0 6px;
+    -ms-border-radius: 0 0 0 6px;
+    -o-border-radius: 0 0 0 6px;
+}
+
+input[type=text], button, select {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+input[type=text]:focus {
+    outline: none;
+    background: #106868;
+    color: white;
+    border-bottom: 2px solid yellow;
+}
+
+::-webkit-input-placeholder { /* Edge */
+    color:#106868;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #106868;
+  }
+  
+  ::placeholder {
+    color: #106868;
+  }
+  
+select {
+    background: white;
+    color: #106868;
+    font-size: 1em;
+    padding: 7px;
+    cursor: pointer;
+    border: 0;
+    border-bottom: 2px solid teal;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    -moz-border-radius: 0 0 0 6px;
+    -ms-border-radius: 0 0 0 6px;
+    -o-border-radius: 0 0 0 6px;
+}
+
+/* For IE <= 11 */
+select::-ms-expand {
+    display: none; 
+}
+
+select:hover,
+select:focus {
+  color: #106868;
+  background-color: white;
+  border-bottom-color: #DCDCDC;
+  border: 0;
+  border-bottom: 2px solid teal;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button {
+    background: #106868;
+    font-size: 1em;
+    padding: 8px 14px;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 1px 1px 5px #106868, -1px -1px 10px #106868;
+    cursor: pointer;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    transition: transform 0.2s ease-in-out;
+    -webkit-transition: transform 0.2s ease-in-out;
+    -moz-transition: transform 0.2s ease-in-out;
+    -ms-transition: transform 0.2s ease-in-out;
+    -o-transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.02) translateY(1px);
+    -webkit-transform: scale(1.02) translateY(1px);
+    -moz-transform: scale(1.02) translateY(1px);
+    -ms-transform: scale(1.02) translateY(1px);
+    -o-transform: scale(1.02) translateY(1px);
+}
+
+button:nth-of-type(1) {
+    margin: 0 10px 0 0;
+}
+
+
+/*=========
+    footer
+==========*/
+
+footer {
+    text-align: center;
+    text-shadow: 1px 1px 1px #389696, 1px 1px 2px #389696, 1px 1px 3px #389696, 1px 1px 4px #389696, -1px -1px 1px #389696, -1px -1px 2px #389696,-2px -2px 5px #389696;
+    letter-spacing: 1px;
+    padding: 20px;
+    background: #44b8b8;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+
+@media screen and (min-width: 500px) {
+
+    main {
+         border-radius: 0 30px 0 30px;
+         -webkit-border-radius: 0 30px 0 30px;
+         -moz-border-radius: 0 30px 0 30px;
+         -ms-border-radius: 0 30px 0 30px;
+         -o-border-radius: 0 30px 0 30px;
+    }
+
+    section:nth-of-type(1) span {
+        font-size: 2em;
+        width: 40px;
+
+    }
+
+    section:nth-of-type(1) span.seconds {
+        font-size: 1.6em;
+    }
+
+    aside > div {
+        width: 300px;
+    }
+
+    aside header {
+        font-size: 1.4em;
+    }
+
+    section:nth-of-type(2) > * {
+        max-width: 400px;
+    }
+
+    section:nth-of-type(2) > div:nth-of-type(1){
+        font-size: 1.3em;
+    }
+
+    div.table-header {
+        font-size: 1.1em;
+    }
+
+    div.table-row > * {
+        font-size: 1em;
+    }
+    
+    button {
+        padding: 10px 20px;
+    }
+    
+    button:nth-of-type(1) {
+        margin: 0 20px 0 0;
+    }
+
+    footer {
+        font-size: 1em;
+    } 
+}
+
+@media screen and (min-width: 600px) {
+    aside > div {
+        width: 330px;
+    }
+
+    section:nth-of-type(2) > * {
+        max-width: 450px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    aside > div {
+        width: 350px;
+    }
+   
+    section:nth-of-type(2) > * {
+        max-width: 500px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    body {
+        max-width: 1290px;
+        margin: 0 auto;
+    }
+
+    main {
+        grid-template-columns: 0.45fr 0.55fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: "top top"
+                             "left right"
+                             "footer footer";
+    }
+
+    section:nth-of-type(1) {
+        grid-area: top;
+    }
+
+    aside {
+        grid-area: left;
+       
+    }
+
+    aside > * {
+       margin: 0 auto;
+    }
+
+    aside img {
+        margin: 80px auto 50px auto;
+    }
+
+
+    section:nth-of-type(2) {
+        grid-area: right;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+}
+
+/*
+Image sources:
+
+A Chicken Parmesan Meal Kit
+https://thechickenwire.chick-fil-a.com/food
+
+Vegetables
+https://www.happenings.com.ng/latest/2020/01/24/5-must-have-local-dishes-in-nigeria
+
+Rice and dodo
+https://sisijemimah.com/2016/11/05/mixed-vegetable-sauce/
+*/

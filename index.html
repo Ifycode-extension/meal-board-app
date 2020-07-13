@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Meal Board</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-compatible" content="ie=edge">
+        <link rel="shortcut icon" href="./img/chicken-recipe.png">
+        <link rel="stylesheet" href="./css/index.css">
+    </head>
+    <body>
+        <main>
+            <!-- Clock -->
+            <section>
+                <div>
+                    <span class="hours"></span>
+                    <span class="column">:</span>
+                    <span class="minutes"></span>      
+                    <span class="period-of-day"></span>
+                    <span class="seconds"></span>
+                </div>
+            </section>
+
+            <!-- Img change area -->
+            <aside>
+                <div class="div-img">
+                    <img  src="./img/chicken-recipe.png" alt="image">
+                </div>
+            <header class="form-header">Eat good food regularly</header>
+            </aside>
+
+            <!-- Form and meal board -->
+            <section>
+                <form>
+                    <p id="validation-message" class="hide-validation-message">All fields required</p>
+                    <fieldset>
+                        <input id="input" class="input" type="text" name="name" placeholder="What would you like to eat?" autocomplete="off" required>
+                    
+                       
+                        <select id="preferred-time">
+                            <option id="add-time" value="Choose preferred time" disabled selected>Choose preferred time</option>
+                            <optgroup label="Breakfast">
+                               
+                                <option id="am8" value="8am" >8am</option>
+                                <option id="am10" value="10am">10am</option>
+                            </optgroup>
+                            <optgroup label="Lunch">
+                                <option value="1pm">1pm</option>
+                                <option value="3pm">3pm</option>
+                            </optgroup>
+                            <optgroup label="Dinner">
+                                <option value="7pm">7pm</option>
+                                <option value="8pm">8pm</option>
+                            </optgroup>
+                        </select>
+                        <div>
+                            <button class="add">Add</button>
+                            <button class='clear'>Clear from board</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <div>Meal Dashboard</div>
+                <div>
+                    <div class="table table-header">
+                        <div class="table-row">
+                            <div>
+                               Meal
+                            </div>
+                            <div>
+                                Name
+                            </div>
+                            <div>
+                                Time
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table">
+                        <div class="table-row">
+                            <div>
+                                Breakfast
+                            </div>
+                            <div class="breakfast-choice">
+                               
+                            </div>
+                            <div class="breakfast-time">
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table">
+                        <div class="table-row">
+                            <div>
+                                Lunch
+                            </div>
+                            <div class="lunch-choice">
+                                
+                            </div>
+                            <div class="lunch-time">
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table">
+                        <div class="table-row">
+                            <div>
+                                Dinner
+                            </div>
+                            <div class="dinner-choice">
+                                
+                            </div>
+                            <div class="dinner-time">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </section>
+
+            <!-- Footer -->
+            <footer><a href="">Go to github Repo</a></footer>
+        </main>
+        
+       <script src="./js/index.js"></script>
+    </body>
+</html>
