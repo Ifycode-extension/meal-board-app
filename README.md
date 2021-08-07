@@ -12,7 +12,7 @@ Google Africa Developer scholarship 2020 task given by GADS2020 mentor [Tolufolo
 |![html5-template-desktop](https://user-images.githubusercontent.com/45185388/128585411-65c48852-ba7a-4135-8fef-dfd5ccf8560e.png)|![html5-template-medium](https://user-images.githubusercontent.com/45185388/128585413-35221a77-a2f4-4342-98b2-ae425c1361f4.png)|![html5-template-mobile](https://user-images.githubusercontent.com/45185388/128585414-b4aec66c-395b-4326-8989-4c03d4ecca14.png)|
 
 ## App guide
-* Visit [github pages link](https://ifycode.github.io/Meal-Board/) to see meal board app in the browser
+* Visit [github pages link](https://ifycode.github.io/Meal-Board-App/) to see meal board app in the browser
 * Enter details in the form input and click the "add" button to save details to meal board. Validation message should show up if any of the input field is not filled
 * Reload the page to see that the details in the meal board dosen't disappear
 * Once you're satisfied with the details you have entered, use the "clear from board" button to clear content from the mealboard
